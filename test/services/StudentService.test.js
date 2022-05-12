@@ -23,6 +23,5 @@ describe("Tests for StudentService", () => {
         expect(studentsListEmail.length).toBe(2);
         expect(studentsListEmail[0].name).toBe("Yoselin");
         expect(studentsListEmail[0].email).toBe("yos@gmail.com");
-        expect(studentsListEmail[0].credits).toBe(350);
     });
 });
