@@ -19,8 +19,8 @@ describe("Tests for StudentService", () => {
 
     test("Requirement 2: Get all email of students with certification", () => {
         const studentsListEmail = StudentService.getEmailStudentsWithCertification(students);
-        expect(typeof studentsList).toBe("object");
-        expect(studentsList.length).toBe(2);
+        expect(typeof studentsListEmail).toBe("object");
+        expect(studentsListEmail.length).toBe(2);
         expect(studentsListEmail[0].name).toBe("Yoselin");
         expect(studentsListEmail[0].email).toBe("yos@gmail.com");
         expect(studentsListEmail[0].credits).toBe(350);
