@@ -4,8 +4,17 @@
   "description": "Code Challenge Semana 4 Backend JS",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "linter": "node ./node_modules/eslint/bin/eslint.js .",
+    "linter-fix": "node ./node_modules/eslint/bin/eslint.js . --fix"
   },
+  "keywords": [
+    "api",
+    "visual-thinking"
+  ],
   "author": "herr-code",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^8.15.0"
+  }
 }
