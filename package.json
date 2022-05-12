@@ -1,0 +1,11 @@
+{
+  "name": "visual-thinking-api",
+  "version": "1.0.0",
+  "description": "Code Challenge Semana 4 Backend JS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "herr-code",
+  "license": "ISC"
+}
