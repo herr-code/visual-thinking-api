@@ -24,4 +24,14 @@ describe("Tests for StudentService", () => {
         expect(studentsListEmail[0].name).toBe("Yoselin");
         expect(studentsListEmail[0].email).toBe("yos@gmail.com");
     });
+
+    test("Requirement 3: Get all students with credits greater than (500)", () => {
+        const studentsListGreaterThan = StudentService.getStudentsWithCreditsGreaterThan(students);
+        expect(typeof studentsListEmail).toBe("object");
+        expect(studentsListEmail.length).toBe(3);
+        expect(studentsListEmail[0].name).toBe("Diana");
+        expect(studentsListEmail[0].email).toBe("diana@gmail.com");
+        expect(studentsList[0].credits).toBe(600);
+        expect(studentsList[0].crehaveCertification).toBeTruthy();
+    });
 });
