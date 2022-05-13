@@ -26,12 +26,13 @@ describe("Tests for StudentService", () => {
     });
 
     test("Requirement 3: Get all students with credits greater than (500)", () => {
-        const studentsListGreaterThan = StudentService.getStudentsWithCreditsGreaterThan(students);
-        expect(typeof studentsListEmail).toBe("object");
-        expect(studentsListEmail.length).toBe(3);
-        expect(studentsListEmail[0].name).toBe("Diana");
-        expect(studentsListEmail[0].email).toBe("diana@gmail.com");
-        expect(studentsList[0].credits).toBe(600);
-        expect(studentsList[0].crehaveCertification).toBeTruthy();
+        const credits = 500;
+        const studentsListGreaterThan = StudentService.getStudentsWithCreditsGreaterThan(students, credits);
+        expect(typeof studentsListGreaterThan).toBe("object");
+        expect(studentsListGreaterThan.length).toBe(3);
+        expect(studentsListGreaterThan[0].name).toBe("Diana");
+        expect(studentsListGreaterThan[0].email).toBe("diana@gmail.com");
+        expect(studentsListGreaterThan[0].credits).toBe(600);
+        expect(studentsListGreaterThan[0].haveCertification).not.toBeTruthy();
     });
 });
