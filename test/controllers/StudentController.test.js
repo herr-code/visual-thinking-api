@@ -19,4 +19,13 @@ describe("Tests for StudentController", () => {
         expect(emailListOfStudentsWithCertification[0].name).toBe("Warren");
         expect(emailListOfStudentsWithCertification[0].email).toBe("Todd@visualpartnership.xyz");
     });
+
+    test("Requirement 3: Get all students with credits greater than (500)", () => {
+        const listOfStudentsGreaterThan = StudentController.getListOfStudentsWithCreditsGreaterThan();
+        expect(typeof listOfStudentsGreaterThan).toBe("object");
+        expect(listOfStudentsGreaterThan.length).toBe(29);
+        expect(listOfStudentsGreaterThan[0].name).toBe("Warren");
+        expect(listOfStudentsGreaterThan[0].email).toBe("Todd@visualpartnership.xyz");
+        expect(listOfStudentsGreaterThan[0].credits).toBe(508);
+    });
 });
