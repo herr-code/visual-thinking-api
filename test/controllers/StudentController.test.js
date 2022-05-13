@@ -21,9 +21,10 @@ describe("Tests for StudentController", () => {
     });
 
     test("Requirement 3: Get all students with credits greater than (500)", () => {
-        const listOfStudentsGreaterThan = StudentController.getListOfStudentsWithCreditsGreaterThan();
+        const credits = 500;
+        const listOfStudentsGreaterThan = StudentController.getListOfStudentsWithCreditsGreaterThan(credits);
         expect(typeof listOfStudentsGreaterThan).toBe("object");
-        expect(listOfStudentsGreaterThan.length).toBe(29);
+        expect(listOfStudentsGreaterThan.length).toBe(27);
         expect(listOfStudentsGreaterThan[0].name).toBe("Warren");
         expect(listOfStudentsGreaterThan[0].email).toBe("Todd@visualpartnership.xyz");
         expect(listOfStudentsGreaterThan[0].credits).toBe(508);
